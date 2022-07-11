@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: serie-service
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    config:
+      profile: dev
+  jpa.hibernate.ddl-auto: update
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: DB_SERIES
